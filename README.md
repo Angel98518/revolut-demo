@@ -24,8 +24,8 @@ This project is built using **Next.js**, **Tailwind CSS**, and **Swiper.js** . I
 ## Project Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Angel98518/carousel-test.git
-   cd carousel-test
+   git clone https://github.com/Angel98518/revolut-demo.git
+   cd revolut-demo
    ```
 2. Install dependencies:
    ```sh
