@@ -1,13 +1,14 @@
+import { useState } from "react";
+import { Swiper as SwiperType } from 'swiper';
 import {
   Autoplay,
   EffectCoverflow,
+  EffectFade,
   Navigation,
   Pagination,
-  EffectFade,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Card, { CardItemProps } from "./card";
-import { useState } from "react";
 
 // Define the type for the Card data
 
@@ -16,7 +17,7 @@ interface CardGroupProps {
 }
 
 const CardGroup = ({ data }: CardGroupProps) => {
-  const [swiper, setSwiper] = useState(null);
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const handleSlideClick = (index: number) => {
     if (!swiper)    return;
     if (index !== swiper.realIndex)
@@ -33,7 +34,6 @@ const CardGroup = ({ data }: CardGroupProps) => {
           EffectFade,
         ]}
         slidesPerView={3}
-        pagination={{ clickable: true }}
         edgeSwipeDetection={true}
         effect="coverflow"
         loop={true}
