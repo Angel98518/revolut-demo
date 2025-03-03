@@ -1,6 +1,6 @@
 import { faChevronDown, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Image from "next/image";
 interface CardItemProps {
   image: string;
   title: string;
@@ -20,10 +20,11 @@ const Card = ({
 }: CardItemProps) => {
   return (
     <div className="flex flex-col gap-4 relative h-[400px] w-full px-[1em] py-[2em] rounded-4xl overflow-hidden cursor-pointer">
-      <img
+      <Image
         src={image}
         alt="Card"
         className="w-full h-full object-cover absolute top-0 left-0"
+        fill
       />
       <div className="flex flex-col gap-4 relative z-10 justify-between h-full">
         <div></div>
