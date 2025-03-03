@@ -1,10 +1,13 @@
 'use client';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import CardGroup from './components/cardGroup';
 import Header from './components/header';
+
+
+const CardGroup = dynamic(() => import('./components/cardGroup'), { ssr: false })
 
 export default function Home() {
   const [data,] = useState([
