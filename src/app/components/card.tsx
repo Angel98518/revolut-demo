@@ -19,7 +19,7 @@ const Card = ({
   type,
 }: CardItemProps) => {
   return (
-    <div className="flex flex-col gap-4 relative h-[400px] w-full px-[1em] py-[2em] rounded-4xl overflow-hidden cursor-pointer">
+    <div className="flex flex-col gap-4 relative  h-[25rem] w-[18rem] px-[1em] py-[2em] rounded-4xl overflow-hidden cursor-pointer">
       <Image
         src={image}
         alt="Card"

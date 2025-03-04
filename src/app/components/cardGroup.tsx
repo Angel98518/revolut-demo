@@ -24,7 +24,7 @@ const CardGroup = ({ data }: CardGroupProps) => {
       swiper.slideToLoop(index)
   };
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-4 w-[18rem] md:w-[40rem] lg:w-full">
       <Swiper
         modules={[
           Navigation,
@@ -49,16 +49,15 @@ const CardGroup = ({ data }: CardGroupProps) => {
         breakpoints={{
           320: {
             slidesPerView: 1,
-            spaceBetween: 20,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 100,
+            spaceBetween: 30,
             centeredSlides: false,
             coverflowEffect: {
               rotate: 0,
-              stretch: -30,
-              // depth: 30,
+              stretch: -20,
+              depth: 30,
               modifier: 0,
               slideShadows: false,
             },
@@ -69,9 +68,9 @@ const CardGroup = ({ data }: CardGroupProps) => {
             centeredSlides: true,
             coverflowEffect: {
               rotate: 0,
-              stretch: -8,
+              stretch: -10,
               depth: 30,
-              modifier: 2.5,
+              modifier: 3,
               slideShadows: false,
             },
           },
